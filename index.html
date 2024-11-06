@@ -22,15 +22,16 @@
             background-color: #343a40;
             display: flex;
             justify-content: center;
-            border-radius: 7px;
+            border-radius: 10px;
+            flex-wrap: wrap; /* يجعل القائمة تتكيف مع الشاشة */
         }
         li {
-            padding: 12px 15px; /* تصغير الحجم */
+            padding: 10px 15px; /* تعديل حجم التباعد */
         }
         li a {
             color: #fff;
             text-decoration: none;
-            font-size: 16px; /* تصغير الحجم */
+            font-size: 16px; /* حجم أصغر ليتناسب مع الأجهزة الصغيرة */
             font-weight: 600;
         }
         li a:hover {
@@ -40,15 +41,15 @@
 
         /* تنسيق العناوين */
         h1 {
-            font-size: 2.5em; /* تصغير حجم العنوان */
+            font-size: 2em; /* حجم أصغر للعناوين */
             color: #42464d;
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         /* تنسيق الصور */
         .section img {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             margin: 10px;
@@ -65,19 +66,19 @@
             background-color: #ffffff;
             border-radius: 15px;
             text-align: center;
-            max-width: 800px;
+            max-width: 90%; /* جعلها مناسبة لشاشة أصغر */
         }
 
         /* تنسيق الأزرار */
         .custom-button {
             display: block;
-            width: 80%;
+            width: 90%; /* عرض مناسب للأجهزة الصغيرة */
             max-width: 500px;
             margin: 8px auto;
             padding: 12px;
             background: linear-gradient(45deg, #8b7272, #44160a);
             color: white;
-            font-size: 18px;
+            font-size: 16px; /* حجم نص أصغر */
             font-weight: bold;
             text-align: center;
             text-decoration: none;
@@ -95,18 +96,18 @@
         /* زر البحث الثابت */
         .search-button {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 20px; /* المسافة من أسفل الصفحة */
+            right: 20px;  /* المسافة من الجهة اليمنى */
             padding: 12px 20px;
             background-color: #007b7f;
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             text-align: center;
             text-decoration: none;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
+            z-index: 1000; /* تأكد من أن الزر يظهر فوق المحتويات الأخرى */
         }
 
         .search-button:hover {
@@ -118,28 +119,27 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 20px;
             margin-top: 20px;
-            padding: 0 20px;
+            padding: 0 10px;
         }
 
         .book-item {
-            width: 280px;
+            width: 150px; /* حجم أصغر */
             background-color: #ffffff;
             border-radius: 15px;
-            padding: 20px;
+            padding: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
 
-        .book-item:hover {
-            transform: scale(1.05);
+        .book-item:hover {transform: scale(1.05);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
 
         .book-item img {
-            max-height: 250px;
+            max-height: 120px; /* ارتفاع أصغر للصور */
             object-fit: cover;
             border-radius: 10px;
             transition: transform 0.3s;
@@ -150,13 +150,14 @@
         }
 
         .borrow-button {
-            margin-top: 10px;
-            padding: 10px 20px;
+            margin-top: 8px;
+            padding: 8px 15px;
             background-color: #007b7f;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 14px;
             transition: background-color 0.3s;
         }
 
@@ -164,41 +165,19 @@
             background-color: #006f6f;
         }
 
-        /* تنسيق الأجهزة المحمولة */
-        @media (max-width: 768px) {
-            ul {
-                flex-direction: column; /* جعل القائمة عمودية */
-            }
-            li {
-                padding: 10px 12px; /* تصغير padding للعناصر */
-            }
-            li a {
-                font-size: 20px; /* تصغير حجم الخط */
-            }
-            h1 {
-                font-size: 4em; /* تصغير العنوان */
-            }
-            .books-container {
-                gap: 20px;
-            }
-            .book-item {
-                width: 100%; /* جعل الكتب تأخذ العرض الكامل على الجوال */
+        /* وسائط CSS للأجهزة الصغيرة */
+        @media (max-width: 600px) {
+            .custom-button, .search-button {
+                font-size: 14px;
                 padding: 10px;
             }
-            .book-item img {
-                max-height: 100px; /* تصغير حجم الصور */
+            .book-item {
+                width: 140px;
             }
-        }
-
-        @media (max-width: 480px) {
+            ul {
+                flex-direction: column;
+            }
             li {
-                padding: 8px 9px; /* تصغير أكثر للأزرار */
-            }
-            li a {
-                font-size: 10px; /* تصغير الخط */
-            }
-            .custom-button {
-                font-size: 10px; /* تصغير الخط */
                 padding: 10px;
             }
         }
@@ -261,6 +240,8 @@
         <h3>مؤيد سليم - فيزياء</h3>
         <button class="borrow-button" onclick="window.location.href='https://t.me/d_tt02/23'">تحميل الكتاب</button>
     </div>
+
+   
 </div>
 
 <!-- زر البحث الثابت -->
