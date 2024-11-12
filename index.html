@@ -19,22 +19,24 @@
         }
 
         .button-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: block; /* جعل الأزرار عمودية */
             margin-top: 20px;
-            gap: 10px;
+            text-align: center; /* موازاة الأزرار في المنتصف */
         }
 
         .button-list a {
-            display: inline-block;
+            display: block; /* جعل كل زر يظهر في سطر منفصل */
             background-color: #4CAF50;
             color: white;
-            padding: 10px 20px;
+            padding: 6px 15px; /* جعل الزر صغير */
             text-decoration: none;
             border-radius: 5px;
-            font-size: 1rem;
+            font-size: 0.9rem; /* تصغير حجم الخط */
+            margin-bottom: 8px; /* مسافة بين الأزرار */
+            width: 150px; /* جعل الأزرار عرض ثابت */
             text-align: center;
+            margin-left: auto;
+            margin-right: auto; /* جعل الأزرار متمركزة */
             transition: background-color 0.3s;
         }
 
@@ -45,8 +47,9 @@
         /* تحسين التصميم للأجهزة الصغيرة */
         @media (max-width: 600px) {
             .button-list a {
-                padding: 8px 16px;
-                font-size: 0.9rem;
+                padding: 6px 12px; /* تقليل الحشو للأجهزة الصغيرة */
+                font-size: 0.8rem; /* تصغير حجم الخط أكثر للأجهزة الصغيرة */
+                width: 120px; /* تقليل عرض الأزرار على الأجهزة الصغيرة */
             }
 
             h2 {
@@ -58,10 +61,10 @@
             display: inline-block;
             background-color: #008CBA;
             color: white;
-            padding: 12px 30px;
+            padding: 10px 25px;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-top: 20px;
             transition: background-color 0.3s;
         }
@@ -72,14 +75,78 @@
 
         @media (max-width: 600px) {
             .channel-btn {
-                padding: 10px 20px;
-                font-size: 1rem;
+                padding: 8px 18px;
+                font-size: 0.9rem;
             }
+        }
+         /* تنسيق الصور */
+         .section img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .section img:hover {
+            transform: scale(1.1);
+        }
+
+          /* تنسيق الأزرار */
+          .button {
+            padding: 12px 30px; /* توسيع الأزرار */
+            font-size: 17px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #a0a0a0; /* لون رصاصي */
+            border: none;
+            border-radius: 8px; /* زوايا دائرية */
+            text-decoration: none; /* إزالة التسطير من الرابط */
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+        }
+
+        /* تأثير التمرير */
+        .button:hover {
+            background-color: #d4af37; /* لون ذهبي عند التمرير */
+        }
+
+        /* تأثير عند الضغط */
+        .button:active {
+            transform: translateY(3px); /* تحريك الزر للأسفل */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* تقليل الظل */
         }
     </style>
 </head>
 <body>
+    <div class="section" id="d1">
+        <h1>ابن البصرة | طلاب العراق        </h1>
+        <p> مرحباً بكم  
+            وجهتكم الأولى للنجاح  نسعى لتقديم محتوى تعليمي شامل ومفيد يساعدك على التفوق في دراستك وتطوير مهاراتك
+             ماذا نقدم؟
 
+             ملخصات و شروحات واضحة وسهلة للمناهج.
+            اختبارات تجريبية لتحسين مستواك.
+            نصائح دراسية تساعدك على تنظيم وقتك.
+             أحدث  وأفضل المصادر للطلاب.
+            <br></br> 
+            انضم إلينا الآن وتفوّق في دراستك من خلال الضغط على صور القنوات
+            
+           </p>
+           <div>
+            <a href="https://t.me/d_tt3" target="_blank">
+                <img src="img/1.jpg" alt="ابن البصرة | طلاب العراق">
+            </a>
+            <a href="https://t.me/d_tt111" target="_blank">
+                <img src="img/2.jpg" alt="ابن البصرة | طلاب العراق">
+            </a>
+            <a href="https://t.me/hasan99bot" target="_blank">
+                <img src="img/3.jpg" alt="ابن البصرة | طلاب العراق">
+            </a>
+           
+        </div>
+           <h2>  نتائج السادس الإعدادي الدور الثالث - العراق </h2>
     <h2> “لا يوجد لدينا موعد محدد للإعلان عن النتائج حتى الآن، ولكننا في انتظار التحديثات في أقرب وقت”</h2>
 
     <div class="button-list">
@@ -105,9 +172,30 @@
     <!-- زر الانضمام للقناة -->
     <a href="https://lraq2.github.io/-_-/" class="channel-btn" target="_blank">انضم إلى قناتنا على تلغرام</a>
 
+
+
+
+
+
+
+
+
+    <br></br> 
+        <body>
+
+            <div class="button-container">
+                <a href="https://t.me/hasan99bot" class="button"> السادس الاعدادي</a>
+                <a href="https://t.me/hasan99bot?start=895131a1a04d8ac5228807797633494c" class="button">الثالث المتوسط</a>
+        
+            </div>
+            <br></br>  
+            <div class="button-container">
+                <a href="https://t.me/hasan99bot?start=2c3c1350fa7dd68e8dda353ddb8e1133" class="button">السادس ابتدائي</a>
+                <a href="https://t.me/hasan99bot?start=d99b8a5acba9f088d014cf22c5f561c4" class="button">بصمات نصائح</a>
+            </div>
+           
+        </body>
+        </html>
+
 </body>
 </html>
-
-
-
-
